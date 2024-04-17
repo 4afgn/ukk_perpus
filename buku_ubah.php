@@ -62,14 +62,13 @@
             <div class="row mb-3">
                 <div class="col-md-2">Deskripsi</div>
                 <div class="col-md-8">
-                    <textarea name="deskripsi" rows="5" class="from-control"><?php echo $data['deskripsi']; ?></textarea>
+                    <textarea name="deskripsi" rows="5" class="form-control"></textarea>
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                 <button type="submit" class="btn btn-primary" name="submit" value="submit">Simpan</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
                 <a href="?page=buku" class="btn btn-danger">Kembali</a>
             </div>
             </div>

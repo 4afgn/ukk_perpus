@@ -13,7 +13,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-success">
+    <body class="bg-dark">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -21,7 +21,10 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Register Perpustakaan Digital</h3></div>
+                                <div class="card-header bg-primary text-white">
+                                            <h3 class="text-center font-weight-bold my-4">Register Perpustakaan Digital</h3>
+                                        </div>
+
                                     <div class="card-body">
                                         <?php
                                             if(isset($_POST['register'])) {
@@ -42,42 +45,42 @@
                                                 }
                                             }
                                         ?>
-                                        <form method="post">
-                                            <div class="form-group">
-                                                <label class="small mb-1">Nama Lengkap</label>
-                                                <input class="form-control" type="text" required name="nama" placeholder="Masukkan Nama Lengkap" />
+                                        <form method="post" class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="inputNama" class="form-label">Nama Lengkap</label>
+                                                <input type="text" class="form-control" id="inputNama" name="nama" placeholder="Masukkan Nama Lengkap" required>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="small mb-1">Email</label>
-                                                <input class="form-control" type="text" required name="email" placeholder="Masukkan Email" />
+                                            <div class="col-md-6">
+                                                <label for="inputEmail" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Masukkan Email" required>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="small mb-1">No. Telepon</label>
-                                                <input class="form-control" type="text" required name="no_telepon" placeholder="Masukkan No. Telepon" />
+                                            <div class="col-md-6">
+                                                <label for="inputUsername" class="form-label">Username</label>
+                                                <input type="text" class="form-control" id="inputUsername" name="username" placeholder="Masukkan Username" required>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="small mb-1">Alamat</label>
-                                                <textarea name="" rows="5" required class="form-control py-4"></textarea>
+                                            <div class="col-md-6">
+                                                <label for="inputPassword" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="small mb-1">username</label>
-                                                <input class="form-control" type="username" required name="username" placeholder="Masukkan Username" />
+                                            <div class="col-md-12">
+                                                <label for="inputAlamat" class="form-label">Alamat</label>
+                                                <input type="text" class="form-control" id="inputalamat"  name="alamat" placeholder="Masukkan Alamat" required>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="small mb-1" for="inputpassword">Password</label>
-                                                <input class="form-control" required name="password" type="password" placeholder="Password" />
-                                            </div>
+                                            
                                             <div class="form-group">
                                                 <label class="small mb-1">Level</label>
                                                 <select name="level" required class="form-select">
                                                     <option value="peminjam">peminjam</option>
                                                 </select>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button class="btn btn-primary" type="submit" name="register" value="register">Register</button>
-                                                <a href="login.php" class="btn btn-danger">Kembali</a>
+                                            <div class="col-md-12 d-grid">
+                                                <button class="btn btn-primary btn-lg" type="submit" name="register" value="register">Register</button>
+                                            </div>
+                                            <div class="col-md-12 text-center">
+                                                <span>Sudah punya akun? </span><a href="login.php">Login disini</a>
                                             </div>
                                         </form>
+
                                     </div>
                                 </div>
                             </div>

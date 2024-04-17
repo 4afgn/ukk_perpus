@@ -24,7 +24,6 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                 <button type="submit" class="btn btn-primary" name="submit" value="submit">Simpan</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
                 <a href="?page=kategori" class="btn btn-danger">Kembali</a>
             </div>
             </div>

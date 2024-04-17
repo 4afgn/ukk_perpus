@@ -11,7 +11,8 @@
                     $id_user = $_SESSION['user']['id_user'];
                     $ulasan = $_POST['ulasan'];
                     $rating = $_POST['rating'];
-                    $query = mysqli_query($koneksi, "UPDATE ulasan set id_buku='$id_buku', ulasan='$ulasan', rating=$rating' WHERE id_ulasan=$id");
+                    $query = mysqli_query($koneksi, "UPDATE ulasan set id_buku='$id_buku', ulasan='$ulasan', rating='$rating' WHERE id_ulasan=$id");
+
 
                     if($query) {
                         echo '<script>alert("Ubah data berhasil.");</script>';
@@ -62,7 +63,6 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                 <button type="submit" class="btn btn-primary" name="submit" value="submit">Simpan</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
                 <a href="?page=ulasan" class="btn btn-danger">Kembali</a>
             </div>
             </div>

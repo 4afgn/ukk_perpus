@@ -13,7 +13,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-success">
+    <body class="bg-dark">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -21,7 +21,10 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login Perpustakaan Digital</h3></div>
+                                <div class="card-header bg-primary text-white">
+                                            <h3 class="text-center font-weight-bold my-4">Login Perpustakaan Digital</h3>
+                                        </div>
+
                                     <div class="card-body">
                                         <?php
                                             if(isset($_POST['login'])) {
@@ -38,21 +41,29 @@
                                                     echo '<script>alert("maaf, username/password salah")</script>';
                                                 }
                                             }
-                                        ?>
-                                        <form method="post">
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmailAdress" type="text" name="username" placeholder="Enter username" />
-                                                <label for="inputEmail">Username</label>
+                                        ?><form method="post" class="row g-3">
+                                        <div class="col-md-12">
+                                            <label for="inputEmail" class="form-label">Username</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                                <input type="text" class="form-control" id="inputEmailAdress" name="username" placeholder="Enter username" required>
                                             </div>
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputPassword" name="password" type="password" placeholder="Password" />
-                                                <label for="inputPassword">Password</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="inputPassword" class="form-label">Password</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="basic-addon2"><i class="fas fa-lock"></i></span>
+                                                <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required>
                                             </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button class="btn btn-primary" type="submit" name="login" value="login">Login</button>
-                                                <a class="btn btn-danger" href="register.php">Register</a>
-                                            </div>
-                                        </form>
+                                        </div>
+                                        <div class="col-md-12 d-grid">
+                                            <button class="btn btn-primary btn-lg" type="submit" name="login" value="login">Login</button>
+                                        </div>
+                                        <div class="col-md-12 text-center">
+                                            <span>Don't have an account? </span><a href="register.php">Register here</a>
+                                        </div>
+                                    </form>
+                                    
                                     </div>
                                 </div>
                             </div>
